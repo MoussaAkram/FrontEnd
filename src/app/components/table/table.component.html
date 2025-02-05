@@ -27,7 +27,14 @@
       <table class="hidden min-w-full text-gray-900 md:table">
         <thead class="rounded-lg text-left text-sm font-normal">
         <tr>
-          <th scope="col" class="px-3 py-5 font-medium">ID</th>
+          <th scope="col" class="px-3 py-5 font-medium" >
+            <button (click)="sortData('id')">
+              <span *ngIf="sortColumn === 'id'">
+              {{ sortDirection === 'asc' ? '▲' : '▼' }}
+            </span>
+              ID
+            </button>
+          </th>
           <th scope="col" class="px-3 py-5 font-medium">Age</th>
           <th scope="col" class="px-3 py-5 font-medium">Dob</th>
           <th scope="col" class="px-3 py-5 font-medium">email</th>
